@@ -10,18 +10,46 @@ import UIKit
 import Parse
 import ParseUI
 
-class TweetViewController: UIViewController {
+class TweetViewController: UIViewController, UITextViewDelegate{
+    
+    @IBOutlet var messageTxt: UITextView!
+    
+    @IBOutlet var charLbls: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
+    
+    
+    @IBAction func cancelBtn_click(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
+    func textViewDidChange(textView: UITextView) {
+        var len = count(messageTxt.text.utf16)
+        var diff = 90 - len
+        
+        if diff < 0 {
+            
+            charLbls.textColor = UIColor.redColor()
+        } else {
+            
+            charLbls.textColor = UIColor.blackColor()
+        }
+        
+        charLbls.text = " \(diff) chars left"
+        
+    }
+    
     
 
     /*

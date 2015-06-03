@@ -154,12 +154,18 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelBtn_click:" destination="C8N-qe-VWn" eventType="touchUpInside" id="Hs8-VT-WYv"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8r2-mL-lTp">
                                 <rect key="frame" x="10" y="67" width="354" height="81"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="C8N-qe-VWn" id="Mex-29-RjQ"/>
+                                </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CeA-1X-yyE">
                                 <rect key="frame" x="296" y="163" width="63" height="30"/>
@@ -177,6 +183,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="charLbls" destination="41y-Bt-33m" id="ed6-zi-DaB"/>
+                        <outlet property="messageTxt" destination="8r2-mL-lTp" id="p56-Lt-jW8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aS8-Ca-3lc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

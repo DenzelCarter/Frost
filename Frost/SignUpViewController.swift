@@ -119,6 +119,12 @@ class SignUpViewController:UIViewController, UIImagePickerControllerDelegate, UI
                     installation["user"] = user
                     installation.saveInBackgroundWithBlock(nil)
                     println("signup")
+                    var followObj = PFObject(className: "follow")
+                    
+                    followObj["user"] = PFUser.currentUser()?.username
+                    followObj["userToFollow"] = PFUser.currentUser()?.username
+                    followObj.save()
+
                     
                     self.performSegueWithIdentifier("SignUpUser", sender: self)
                 } else {

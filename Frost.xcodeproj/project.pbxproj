@@ -137,6 +137,7 @@
 			children = (
 				06B284B21B18F10C004ED2C1 /* AppDelegate.swift */,
 				06B284B41B18F10C004ED2C1 /* LoginViewController.swift */,
+				066503BD1B1C038700F28915 /* UsersViewCell.swift */,
 				06B284B61B18F10C004ED2C1 /* Main.storyboard */,
 				06B284F91B195F24004ED2C1 /* UsersViewController.swift */,
 				06B284F51B19327E004ED2C1 /* HomeViewCell.swift */,
@@ -145,7 +146,6 @@
 				06B284B91B18F10C004ED2C1 /* Images.xcassets */,
 				06B284BB1B18F10C004ED2C1 /* LaunchScreen.xib */,
 				06B284B01B18F10C004ED2C1 /* Supporting Files */,
-				066503BD1B1C038700F28915 /* UsersViewCell.swift */,
 			);
 			path = Frost;
 			sourceTree = "<group>";

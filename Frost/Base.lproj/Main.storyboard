@@ -172,10 +172,14 @@
                                                     <state key="normal" title="Follow">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="followBtn:" destination="OWb-pq-ZvG" eventType="touchUpInside" id="wFm-ee-S2K"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="followBtnTxt" destination="hdx-Jr-lV1" id="ctu-n3-9Cr"/>
                                             <outlet property="profilePic" destination="tkR-pd-OJe" id="3o2-Hw-OCR"/>
                                             <outlet property="usernameTxt" destination="4Nd-3Q-2HG" id="mnc-u3-p8G"/>
                                         </connections>

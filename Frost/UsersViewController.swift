@@ -44,7 +44,7 @@ class UsersViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             if error == nil {
                 
-                for object: AnyObject in objects! {
+                for object in objects! {
                     
                     self.usersNameArray.append(object.objectForKey("username") as! String)
                     self.usersImageFiles.append(object.objectForKey("profilePic") as! PFFile)
@@ -72,6 +72,25 @@ class UsersViewController: UIViewController, UITableViewDataSource, UITableViewD
         var cell:UsersViewCell = tableView.dequeueReusableCellWithIdentifier("userCell") as! UsersViewCell
         
         cell.usernameTxt.text = self.usersNameArray[indexPath.row]
+        
+        var query = PFQuery(className: "follow")
+        
+        query.whereKey("user", equalTo: PFUser.currentUser()!.username!)
+        query.whereKey("userToFollow", equalTo: cell.usernameTxt.text!)
+        query.countObjectsInBackgroundWithBlock { (count:Int32, error:NSError?) -> Void in
+            
+            if error == nil {
+                
+                if count == 0 {
+                    
+                    cell.followBtnTxt.setTitle("Follow", forState: UIControlState.Normal)
+                } else {
+                    
+                    cell.followBtnTxt.setTitle("following", forState: UIControlState.Normal)
+                }
+            }
+        }
+        
         self.usersImageFiles[indexPath.row].getDataInBackgroundWithBlock { (imagedata:NSData?, error:NSError?) -> Void in
             
             if error == nil {

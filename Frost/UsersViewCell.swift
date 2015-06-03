@@ -16,6 +16,42 @@ class UsersViewCell: UITableViewCell {
     
     @IBOutlet var usernameTxt: UILabel!
     
+    @IBOutlet var followBtnTxt: UIButton!
+    
+    
+    @IBAction func followBtn(sender: AnyObject) {
+        let title = followBtnTxt.titleForState(.Normal)
+        
+        if title == "Follow" {
+            
+            var followObj = PFObject(className: "follow")
+            
+            followObj["user"] = PFUser.currentUser()?.username
+            followObj["userToFollow"] = usernameTxt.text
+            followObj.save()
+            
+            followBtnTxt.setTitle("Unfollow", forState: UIControlState.Normal)
+            
+            
+        } else {
+            
+            var query = PFQuery(className: "classname")
+            query.whereKey("user", equalTo: PFUser.currentUser()!.username!)
+            query.whereKey("userToFollow", equalTo: usernameTxt.text!)
+            
+            var objects = query.findObjects()
+            
+            for object in objects! {
+                
+                object.delete()
+            }
+            
+            followBtnTxt.setTitle("Follow", forState: UIControlState.Normal)
+            
+        }
+        
+    }
+    
     
 
     override func awakeFromNib() {

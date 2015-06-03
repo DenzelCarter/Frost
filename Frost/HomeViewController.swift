@@ -45,6 +45,7 @@ class HomeViewController: UIViewController {
     func tweetBtn_click() {
         
         println("Tweet Something")
+        self.performSegueWithIdentifier("makeTweet", sender: self)
     }
     
     func searchBtn_click(){

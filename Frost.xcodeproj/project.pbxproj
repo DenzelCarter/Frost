@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		066503BE1B1C038700F28915 /* UsersViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066503BD1B1C038700F28915 /* UsersViewCell.swift */; };
+		066503C01B1E86D900F28915 /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066503BF1B1E86D900F28915 /* TweetViewController.swift */; };
 		06B284B31B18F10C004ED2C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B284B21B18F10C004ED2C1 /* AppDelegate.swift */; };
 		06B284B51B18F10C004ED2C1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B284B41B18F10C004ED2C1 /* LoginViewController.swift */; };
 		06B284B81B18F10C004ED2C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06B284B61B18F10C004ED2C1 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		066503BD1B1C038700F28915 /* UsersViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewCell.swift; sourceTree = "<group>"; };
+		066503BF1B1E86D900F28915 /* TweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetViewController.swift; sourceTree = "<group>"; };
 		06B284AD1B18F10C004ED2C1 /* Frost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06B284B11B18F10C004ED2C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06B284B21B18F10C004ED2C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				06B284B41B18F10C004ED2C1 /* LoginViewController.swift */,
 				066503BD1B1C038700F28915 /* UsersViewCell.swift */,
 				06B284B61B18F10C004ED2C1 /* Main.storyboard */,
+				066503BF1B1E86D900F28915 /* TweetViewController.swift */,
 				06B284F91B195F24004ED2C1 /* UsersViewController.swift */,
 				06B284F51B19327E004ED2C1 /* HomeViewCell.swift */,
 				06B284F31B192D08004ED2C1 /* HomeViewController.swift */,
@@ -303,6 +306,7 @@
 				06B284FA1B195F24004ED2C1 /* UsersViewController.swift in Sources */,
 				06B284B51B18F10C004ED2C1 /* LoginViewController.swift in Sources */,
 				06B284F61B19327E004ED2C1 /* HomeViewCell.swift in Sources */,
+				066503C01B1E86D900F28915 /* TweetViewController.swift in Sources */,
 				066503BE1B1C038700F28915 /* UsersViewCell.swift in Sources */,
 				06B284B31B18F10C004ED2C1 /* AppDelegate.swift in Sources */,
 				06B284F41B192D08004ED2C1 /* HomeViewController.swift in Sources */,

@@ -16,6 +16,7 @@ class HomeViewCell: UITableViewCell {
     
     @IBOutlet var messageTxt: UITextView!
     
+    @IBOutlet var tweetImg: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

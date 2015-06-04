@@ -106,15 +106,23 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wjg-ou-hB5">
+                                                    <rect key="frame" x="148" y="36" width="188" height="45"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="messageTxt" destination="X4u-IB-V5K" id="kiu-gX-cFV"/>
                                             <outlet property="profilePic" destination="Jq8-41-JI6" id="zcN-1T-1Ld"/>
+                                            <outlet property="tweetImg" destination="Wjg-ou-hB5" id="h1q-w4-diR"/>
                                             <outlet property="usernameTxt" destination="ez8-8Y-8vu" id="djq-d6-SIl"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9n7-P8-c43" id="5xw-Um-395"/>
+                                    <outlet property="delegate" destination="9n7-P8-c43" id="cot-XZ-dIv"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -172,6 +180,9 @@
                                 <state key="normal" title="Tweet">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="tweetBtnClick:" destination="C8N-qe-VWn" eventType="touchUpInside" id="8gS-Y9-Qqs"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="90 char Left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41y-Bt-33m">
                                 <rect key="frame" x="10" y="167" width="105" height="21"/>
@@ -179,6 +190,18 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uN-nU-hu6">
+                                <rect key="frame" x="10" y="224" width="105" height="30"/>
+                                <state key="normal" title="Add Photo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Add_photo_click:" destination="C8N-qe-VWn" eventType="touchUpInside" id="m6l-Me-kqV"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profilr" translatesAutoresizingMaskIntoConstraints="NO" id="2iE-D8-ki5">
+                                <rect key="frame" x="32" y="273" width="310" height="288"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -186,6 +209,7 @@
                     <connections>
                         <outlet property="charLbls" destination="41y-Bt-33m" id="ed6-zi-DaB"/>
                         <outlet property="messageTxt" destination="8r2-mL-lTp" id="p56-Lt-jW8"/>
+                        <outlet property="tweetImg" destination="2iE-D8-ki5" id="b60-N9-s3D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aS8-Ca-3lc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -365,6 +389,7 @@
     </scenes>
     <resources>
         <image name="climber-md" width="294" height="300"/>
+        <image name="profilr" width="210" height="210"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="e4y-e5-47Y"/>
